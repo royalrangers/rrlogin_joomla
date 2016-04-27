@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>com_rrlogin</name>
+    <author>Rob Alfonso</author>
+    <creationDate>4.13..2016</creationDate>
+    <copyright>© 2012. All rights reserved.</copyright>
+    <license>GNU/GPL v.3 or later.</license>
+    <authorEmail>rob@royalrangers.co</authorEmail>
+    <authoreUrl>http://royalrangers.network</authoreUrl>
+    <version>2.4.1</version>
+    <description>COM_RRLOGIN_XML_DESCRIPTION</description>
+
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <administration>
+
+        <menu img="../media/com_rrlogin/icon_16x16.png">COM_RRLOGIN_MAIN_MENU</menu>
+
+        <languages folder="languages/admin">
+            <language tag="ru-RU">ru-RU/ru-RU.com_rrlogin.sys.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.com_rrlogin.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_rrlogin.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_rrlogin.ini</language>
+            <language tag="uk-UA">uk-UA/uk-UA.com_rrlogin.sys.ini</language>
+            <language tag="uk-UA">uk-UA/uk-UA.com_rrlogin.ini</language>
+            <language tag="es-ES">es-ES/es-ES.com_rrlogin.sys.ini</language>
+            <language tag="es-ES">es-ES/es-ES.com_rrlogin.ini</language>
+            <language tag="nl-NL">nl-NL/nl-NL.com_rrlogin.sys.ini</language>
+            <language tag="nl-NL">nl-NL/nl-NL.com_rrlogin.ini</language>
+            <language tag="pt-PT">pt-PT/pt-PT.com_rrlogin.sys.ini</language>
+            <language tag="pt-PT">pt-PT/pt-PT.com_rrlogin.ini</language>
+        </languages>
+
+        <files folder="admin">
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>rrlogin.php</filename>
+        </files>
+
+    </administration>
+
+    <media destination="com_rrlogin" folder="media">
+        <filename>icon_48x48.png</filename>
+        <filename>icon_16x16.png</filename>
+		<filename>comrrlogin.css</filename>
+    </media>
+
+    <languages folder="languages/site">
+        <language tag="ru-RU">ru-RU/ru-RU.com_rrlogin.ini</language>
+        <language tag="en-GB">en-GB/en-GB.com_rrlogin.ini</language>
+        <language tag="uk-UA">uk-UA/uk-UA.com_rrlogin.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.com_rrlogin.ini</language>
+        <language tag="pt-PT">pt-PT/pt-PT.com_rrlogin.ini</language>
+    </languages>
+
+    <files folder="site">
+        <folder>controllers</folder>
+		<folder>helpers</folder>
+        <folder>models</folder>
+        <folder>tables</folder>
+        <folder>views</folder>
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>rrlogin.php</filename>
+        <filename>router.php</filename>
+    </files>
+</extension> 

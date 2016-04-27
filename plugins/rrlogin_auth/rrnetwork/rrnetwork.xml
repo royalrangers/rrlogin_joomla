@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" method="upgrade" group="rrlogin_auth">
+	<name>Social Login Royal Rangers Network Auth</name>
+	<author>Rob Afonso</author>
+	<creationDate>13.04.2016</creationDate>
+	<copyright>(C) 2012. All rights reserved.</copyright>
+	<license>GNU/GPL v.3 or later.</license>
+	<authorEmail></authorEmail>
+	<authorUrl>http://royalrangers.network</authorUrl>
+	<version>1.0</version>
+	<description>Royal Rangers Network auth</description>
+	<files>
+		<filename plugin="rrnetwork">rrnetwork.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>element</folder>
+	</files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="plugins/rrlogin_auth/rrnetwork/element">
+                <field name="id" type="text" default=""
+                       description="RR Network Application Id"
+                       label="App ID/API Key"
+                        />
+                <field name="password" type="text" default=""
+                       description="RR Network Application Secret"
+                       label="Secret"
+                        />
+        
+                <field
+                        name="callback_url"
+                        type="callbackurl"
+                        label="Callback URI"
+                        description="Callback URI"
+                        filter="unset"
+                        value=""
+                        readonly="true"
+                        class="readonly"
+                        />
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>

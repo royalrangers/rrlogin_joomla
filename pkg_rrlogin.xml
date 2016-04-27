@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5" method="upgrade">
+    <name>com_rrlogin</name>
+    <author>Rob Alfonso</author>
+	<packagename>rrlogin</packagename>
+    <creationDate>24.10.2015</creationDate>
+    <copyright>© 2012 - 2015. All rights reserved.</copyright>
+    <license>GNU/GPL v.3 or later.</license>
+	<packager>RRNetowkr</packager>
+    <version>2.4.1</version>
+    <description>Packet authentication via social networking joomla. The package: plugin, module, component. After installing the plugin activate Social Login.</description>
+	<scriptfile>script.php</scriptfile>
+	<files>
+	    <file type="component" method="upgrade" client="site">com_rrlogin.zip</file>
+	    <file type="module" method="upgrade" client="site">mod_rrlogin.zip</file>
+	    <file type="library" method="upgrade" client="site">lib_rrlogin_oauth.zip</file>
+		<file type="library" client="site" method="upgrade">lib_amcharts.zip</file>
+	    <file type="plugin" method="upgrade" client="site">plg_rrlogin.zip</file>
+	    <file type="plugin" method="upgrade" client="site">plg_rrlogin_profile.zip</file> 
+		<file type="plugin" method="upgrade" client="site">plg_RL_rrnetwork.zip</file>	
+		<file type="plugin" method="upgrade" client="site">plg_authentication_rrlogin.zip</file>
+	</files>
+</extension>

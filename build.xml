@@ -1,0 +1,58 @@
+<project name="rrlogin" default="dist" basedir=".">
+	<property name="build" value="build" />
+	<property name="dist" value="dist" />
+	<property name="filename" value="pkg_rrlogin_v2.4.1_j2.5_j3.zip" />
+
+
+	<target name="init" depends="clean">
+		<mkdir dir="${build}" />
+		<mkdir dir="${dist}" />
+	</target>
+
+	<target name="pack-plugins">
+		<zip destfile="${build}/mod_rrlogin.zip" description="mod_rrlogin">
+			<fileset dir="mod_rrlogin" />
+		</zip>
+		<zip destfile="${build}/com_rrlogin.zip" description="com_rrlogin">
+			<fileset dir="com_rrlogin" />
+		</zip>
+		<zip destfile="${build}/lib_rrlogin_oauth.zip" description="lib_rrlogin_oauth">
+			<fileset dir="libraries/rrlogin" />
+		</zip>
+		<zip destfile="${build}/lib_amcharts.zip" description="lib_amcharts">
+			<fileset dir="libraries/amcharts" />
+		</zip>
+
+		<!-- Plugins -->
+		<zip destfile="${build}/plg_rrlogin.zip" description="plg_rrlogin">
+			<fileset dir="plugins/user/plg_rrlogin" />
+		</zip>
+
+		<zip destfile="${build}/plg_rrlogin_profile.zip" description="plg_rrlogin_profile">
+			<fileset dir="plugins/rrlogin_integration/profile" />
+		</zip>
+		<zip destfile="${build}/plg_authentication_rrlogin.zip" description="plg_authentication_rrlogin">
+			<fileset dir="plugins/authentication/rrlogin" />
+		</zip>
+		
+		<!-- Plugins auch -->
+		<zip destfile="${build}/plg_RL_rrnetwork.zip" description="rrnetwork">
+			<fileset dir="plugins/rrlogin_auth/rrnetwork" />
+		</zip>
+		<copy file="pkg_rrlogin.xml" todir="${build}" />
+		<copy file="script.php" todir="${build}" />
+	</target>
+	
+	<target name="dist" depends="init, pack-plugins">
+		<zip destfile="${dist}/${filename}">
+			<fileset dir="${build}/" >
+				<include name="**/**" />
+			</fileset>
+		</zip>
+	</target>
+
+	<target name="clean" description="clean up">
+		<delete dir="${build}" />
+		<delete dir="${dist}" />
+	</target>
+</project>

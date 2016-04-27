@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="library" version="2.5" method="upgrade">
+  <name>rrlogin</name>
+  <libraryname>rrlogin</libraryname>
+  <version>1.0</version>
+  <creationDate>2013-04-28</creationDate>
+  <author>Rob Alfonso</author>
+  <authorEmail>rob@royalrangers.co</authorEmail>
+  <description>
+  <![CDATA[
+    ]]>
+  </description>
+  <files>
+    <file>rrlogin_oauth.php</file>
+  </files>
+</extension>
