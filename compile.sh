@@ -4,9 +4,9 @@ CWD=$(pwd)
 
 echo $CWD
 
-rm -rf $CWD/build
+rm -rf $CWD/build/*
 
-mkdir $CWD/build
+
 
 BDIR=$CWD/build
 
